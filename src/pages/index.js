@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import Seo from '../components/seo'
@@ -7,17 +7,12 @@ import Seo from '../components/seo'
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={['AUTO', 'WEBP', 'AVIF']}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
+    <h1>Index</h1>
+    <ul>
+      <li>
+        <Link to="/arcane-realty-investors">Arcane Realty Investors</Link>
+      </li>
+    </ul>
   </Layout>
 )
 
