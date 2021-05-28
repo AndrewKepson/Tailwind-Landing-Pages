@@ -1,7 +1,7 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-export default function SidebarGallery({ images, getMainImage }) {
+export default function SidebarGallery({ images }) {
   const getClasses = i => {
     if (i.node.id === '277d77ba-bc34-55bd-b9e6-395ee1582252')
       return 'hidden md:inline w-1/3'
@@ -13,7 +13,6 @@ export default function SidebarGallery({ images, getMainImage }) {
       {images.map((image, i) => (
         <GatsbyImage
           key={i}
-          onClick={getMainImage}
           className={getClasses(image)}
           name={image.node.id}
           image={image.node.childImageSharp.gatsbyImageData}
