@@ -8,22 +8,16 @@ export default function ProductListing({ images }) {
   const [mainImage, setMainImage] = useState({})
 
   useEffect(() => {
-    setMainImage(
-      getImage(
-        images.find(
-          image => image.node.id === '277d77ba-bc34-55bd-b9e6-395ee1582252'
-        ).node.childImageSharp.gatsbyImageData
-      )
+    const img = images.find(
+      image => image.node.id === '277d77ba-bc34-55bd-b9e6-395ee1582252'
     )
+    setMainImage(img.node.childImageSharp.gatsbyImageData)
   }, [])
 
   const getMainImage = e => {
-    setMainImage(
-      getImage(
-        images.find(image => image.node.id === e.target.name).node
-          .childImageSharp.gatsbyImageData
-      )
-    )
+    const img = images.find(image => image.node.id === e.target.name)
+    setMainImage(img.node.childImageSharp.gatsbyImageData)
+    console.log(mainImage)
   }
 
   return (
