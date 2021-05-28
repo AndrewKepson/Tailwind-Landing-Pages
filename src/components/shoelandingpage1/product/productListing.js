@@ -58,11 +58,7 @@ export default function ProductListing() {
           alt="0"
         />
       </div>
-      <SidebarGallery
-        mainImage={mainImage}
-        setMainImage={getMainImage}
-        images={images}
-      />
+      <SidebarGallery mainImage={mainImage} images={images} />
     </div>
   )
 }
