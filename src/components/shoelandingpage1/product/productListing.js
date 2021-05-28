@@ -6,7 +6,7 @@ import TextContent from './textcontent'
 import SidebarGallery from './sidebargallery'
 
 export default function ProductListing() {
-  const [mainImage, setMainImage] = useState(null)
+  const [mainImage, setMainImage] = useState('')
 
   const data = useStaticQuery(graphql`
     query getShoePhotos {
@@ -42,7 +42,7 @@ export default function ProductListing() {
   const getMainImage = e => {
     setMainImage(
       getImage(
-        images.find(image => image.node.id == e.target.name).node
+        images.find(image => image.node.id === e.target.name).node
           .childImageSharp.gatsbyImageData
       )
     )

@@ -12,6 +12,11 @@ const IndexPage = () => (
       <li>
         <Link to="/arcane-realty-investors">Arcane Realty Investors</Link>
       </li>
+      <li>
+        <Link to="/shoe-landing-page-1">
+          Ecommerce Product Page - Shoes/Sneakers
+        </Link>
+      </li>
     </ul>
   </Layout>
 )
