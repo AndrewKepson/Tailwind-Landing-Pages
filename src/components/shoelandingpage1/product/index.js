@@ -22,9 +22,10 @@ export default function Product() {
       }
     }
   `)
+  const images = Array.from(data.allFile.edges)
   return (
     <div className="bg-gray-100 p-6 h-full">
-      <ProductListing data={data} />
+      <ProductListing images={images} />
     </div>
   )
 }

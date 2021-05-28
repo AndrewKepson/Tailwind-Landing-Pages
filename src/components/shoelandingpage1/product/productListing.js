@@ -4,9 +4,8 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import TextContent from './textcontent'
 import SidebarGallery from './sidebargallery'
 
-export default function ProductListing({ data }) {
-  const [mainImage, setMainImage] = useState('')
-  const images = Array.from(data.allFile.edges)
+export default function ProductListing({ images }) {
+  const [mainImage, setMainImage] = useState({})
 
   useEffect(() => {
     setMainImage(
