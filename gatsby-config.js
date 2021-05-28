@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`
+    title: `Tailwind Landing Pages by Andrew Kepson`,
+    description: `Please enjoy these example landing pages that I have built, all styled with Tailwind CSS. This website was built using Gatsby.js, which is why it is so fast.`,
+    author: `Andrew Kepson`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

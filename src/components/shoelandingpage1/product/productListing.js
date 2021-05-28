@@ -39,14 +39,14 @@ export default function ProductListing() {
     )
   }, [])
 
-  const getMainImage = e => {
-    setMainImage(
-      getImage(
-        images.find(image => image.node.id === e.target.name).node
-          .childImageSharp.gatsbyImageData
-      )
-    )
-  }
+  // const getMainImage = e => {
+  //   setMainImage(
+  //     getImage(
+  //       images.find(image => image.node.id === e.target.name).node
+  //         .childImageSharp.gatsbyImageData
+  //     )
+  //   )
+  // }
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 place-items-center place-content-center">
