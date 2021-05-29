@@ -20,17 +20,17 @@ export default function ProductListing({ data }) {
   //   console.log(mainImage)
   // }
 
+  const mainImage = data.find(
+    image => image.node.id === '277d77ba-bc34-55bd-b9e6-395ee1582252'
+  )
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 place-items-center place-content-center">
       <div className="grid grid-cols-1 justify-items-center">
         <TextContent />
         <GatsbyImage
           className="w-full md:w-2/3 shadow-lg"
-          image={
-            data.find(
-              image => image.node.id === '277d77ba-bc34-55bd-b9e6-395ee1582252'
-            ).node.childImageSharp.gatsbyImageData
-          }
+          image={mainImage.node.childImageSharp.gatsbyImageData}
           alt="0"
         />
       </div>
