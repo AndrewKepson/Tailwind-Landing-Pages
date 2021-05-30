@@ -37,7 +37,7 @@ export default function Card({
 
   return (
     <div className="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
-      <div className="p-12 bg-white shadow rounded">
+      <div className="h-full p-12 bg-white shadow rounded">
         <div className="flex w-12 h-12 mx-auto items-center justify-center text-blue-800 font-bold font-heading bg-blue-200 rounded-full">
           {index + 1}
         </div>
