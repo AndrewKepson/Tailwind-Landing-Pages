@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Navbar({ handleMenu }) {
   return (
-    <nav className="flex justify-between items-center px-4 md:px-32 lg:px-44 py-8">
+    <nav className="flex justify-between items-center py-8">
       <h1 className="text-white text-2xl leading-none">
         Evergreen Real Estate
       </h1>
