@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 import Menu from '../menu'
+import Navbar from '../navbar'
 
 export default function Hero() {
   const [hidden, setHidden] = useState('hidden')
@@ -27,27 +28,9 @@ export default function Hero() {
   `)
   return (
     <section className="relative bg-green-800 overflow-x-hidden">
-      <div className="container px-4 mx-auto">
-        <nav className="flex justify-between items-center py-8">
-          <h1 className="text-white text-2xl leading-none">
-            Evergreen Real Estate
-          </h1>
-          <button
-            onClick={handleMenu}
-            className="block navbar-burger text-gray-100 hover:text-gray-200 rounded focus:outline-none"
-          >
-            <svg
-              className="h-4 w-4"
-              fill="currentColor "
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Mobile menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-            </svg>
-          </button>
-        </nav>
-        <div className="mt-16 lg:mb-24 max-w-md">
+      <Navbar handleMenu={handleMenu} />
+      <div className="container grid grid-cols-1 md:grid-cols-2 px-4 mx-auto">
+        <div className="mt-16 lg:mb-24 max-w-md flex flex-col-reverse">
           <div className="max-w-2xl lg:max-w-md mb-6">
             <h2 className="mb-8 text-4xl md:text-5xl text-white font-bold font-heading">
               Enjoy finding the home of your dreams.
@@ -70,23 +53,24 @@ export default function Hero() {
             </button>
           </div>
         </div>
+        <div className="lg:absolute lg:right-0 lg:top-1/2 mt-16 lg:mt-4 lg:-mr-8 lg:transform lg:-translate-y-1/2 w-full lg:w-1/2 md:px-4 lg:pb-0 pb-16 lg:m-12">
+          <GatsbyImage
+            image={data.file.childImageSharp.gatsbyImageData}
+            alt="Colorado Springs, CO"
+          />
+          <p className="p-1 text-gray-200">
+            Photo by{' '}
+            <a href="https://unsplash.com/@djdangeruss?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+              Russell Smith
+            </a>{' '}
+            on{' '}
+            <a href="https://unsplash.com/s/photos/colorado-springs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+              Unsplash
+            </a>
+          </p>
+        </div>
       </div>
-      <div className="lg:absolute lg:right-0 lg:top-1/2 mt-16 lg:mt-4 lg:-mr-8 lg:transform lg:-translate-y-1/2 w-full lg:w-1/2 md:px-4 lg:pb-0 pb-16 lg:m-12">
-        <GatsbyImage
-          image={data.file.childImageSharp.gatsbyImageData}
-          alt="Colorado Springs, CO"
-        />
-        <p className="p-1 text-gray-200">
-          Photo by{' '}
-          <a href="https://unsplash.com/@djdangeruss?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-            Russell Smith
-          </a>{' '}
-          on{' '}
-          <a href="https://unsplash.com/s/photos/colorado-springs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-            Unsplash
-          </a>
-        </p>
-      </div>
+
       <Menu handleMenu={handleMenu} hidden={hidden} />
     </section>
   )

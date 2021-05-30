@@ -22,7 +22,7 @@ export default function Options() {
     <section className="py-10">
       <div className="container px-4 mx-auto">
         <div className="flex flex-wrap items-center -mx-4">
-          <div className="w-full lg:w-2/5 md:px-4 mb-12 lg:mb-0">
+          <div className="w-full lg:w-2/5 mb-12 lg:mb-0">
             <GatsbyImage
               image={data.file.childImageSharp.gatsbyImageData}
               alt="Ivywild School in Colorado Springs"
