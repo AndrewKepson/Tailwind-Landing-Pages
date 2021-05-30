@@ -47,7 +47,7 @@ export default function Hero() {
             </svg>
           </button>
         </nav>
-        <div className="mt-16 lg:mb-24 max-w-md">
+        <div className="mt-16 lg:mb-24 max-w-md flex flex-col-reverse">
           <div className="max-w-2xl lg:max-w-md mb-6">
             <h2 className="mb-8 text-4xl md:text-5xl text-white font-bold font-heading">
               Enjoy finding the home of your dreams.
@@ -69,24 +69,25 @@ export default function Hero() {
               Start&nbsp;for&nbsp;free
             </button>
           </div>
+          <div className="lg:absolute lg:right-0 lg:top-1/2 mt-16 lg:mt-4 lg:-mr-8 lg:transform lg:-translate-y-1/2 w-full lg:w-1/2 md:px-4 lg:pb-0 pb-16 lg:m-12">
+            <GatsbyImage
+              image={data.file.childImageSharp.gatsbyImageData}
+              alt="Colorado Springs, CO"
+            />
+            <p className="p-1 text-gray-200">
+              Photo by{' '}
+              <a href="https://unsplash.com/@djdangeruss?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                Russell Smith
+              </a>{' '}
+              on{' '}
+              <a href="https://unsplash.com/s/photos/colorado-springs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                Unsplash
+              </a>
+            </p>
+          </div>
         </div>
       </div>
-      <div className="lg:absolute lg:right-0 lg:top-1/2 mt-16 lg:mt-4 lg:-mr-8 lg:transform lg:-translate-y-1/2 w-full lg:w-1/2 md:px-4 lg:pb-0 pb-16 lg:m-12">
-        <GatsbyImage
-          image={data.file.childImageSharp.gatsbyImageData}
-          alt="Colorado Springs, CO"
-        />
-        <p className="p-1 text-gray-200">
-          Photo by{' '}
-          <a href="https://unsplash.com/@djdangeruss?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-            Russell Smith
-          </a>{' '}
-          on{' '}
-          <a href="https://unsplash.com/s/photos/colorado-springs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-            Unsplash
-          </a>
-        </p>
-      </div>
+
       <Menu handleMenu={handleMenu} hidden={hidden} />
     </section>
   )
