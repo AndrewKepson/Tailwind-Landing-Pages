@@ -1,7 +1,7 @@
 import React from 'react'
 
-import ArchetypeRealtyContent from '../components/evergreenrealestate'
+import EvergreenRealEstateContent from '../components/evergreenrealestate'
 
-const EvergreenRealEstate = () => <ArchetypeRealtyContent />
+const EvergreenRealEstate = () => <EvergreenRealEstateContent />
 
 export default EvergreenRealEstate

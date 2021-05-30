@@ -1,14 +1,11 @@
 import {
   BookmarkAltIcon,
-  CalendarIcon,
   ChartBarIcon,
-  CursorClickIcon,
   PhoneIcon,
   PlayIcon,
   RefreshIcon,
   ShieldCheckIcon,
-  SupportIcon,
-  ViewGridIcon
+  SupportIcon
 } from '@heroicons/react/outline'
 
 export const features = [
