@@ -9,11 +9,17 @@ const IndexPage = () => (
     <Seo title="Home" />
     <h1>Index</h1>
     <ul>
-      <li>
+      <li className="hover:text-purple-400">
         <Link to="/arcane-realty-investors">Arcane Realty Investors</Link>
       </li>
-      <li>
+      <li className="hover:text-purple-400">
         <Link to="/evergreen-real-estate">Evergreen Real Estate</Link>
+      </li>
+      <li className="hover:text-purple-400">
+        <Link to="/shoe-ecommerce-page">Ecommerce Product Page (Shoes)</Link>
+      </li>
+      <li className="hover:text-purple-400">
+        <Link to="/sustainable-roasters">Sustainable Coffee Roasters</Link>
       </li>
     </ul>
   </Layout>
